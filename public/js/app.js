@@ -28959,8 +28959,73 @@ var render = function () {
             [
               _c(
                 "router-link",
-                { staticClass: "nav-link", attrs: { to: "/products" } },
-                [_vm._v("Products")]
+                { staticClass: "nav-link", attrs: { to: "/dentists" } },
+                [_vm._v("Dentists")]
+              ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            { staticClass: "nav-item" },
+            [
+              _c(
+                "router-link",
+                { staticClass: "nav-link", attrs: { to: "/tachnicians" } },
+                [_vm._v("Techicians")]
+              ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            { staticClass: "nav-item" },
+            [
+              _c(
+                "router-link",
+                { staticClass: "nav-link", attrs: { to: "/patients" } },
+                [_vm._v("Patients")]
+              ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            { staticClass: "nav-item" },
+            [
+              _c(
+                "router-link",
+                { staticClass: "nav-link", attrs: { to: "/cases" } },
+                [_vm._v("Cases")]
+              ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            { staticClass: "nav-item" },
+            [
+              _c(
+                "router-link",
+                { staticClass: "nav-link", attrs: { to: "/settings" } },
+                [_vm._v("Settings")]
+              ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            { staticClass: "nav-item" },
+            [
+              _c(
+                "router-link",
+                { staticClass: "nav-link", attrs: { to: "/logout" } },
+                [_vm._v("Logout")]
               ),
             ],
             1
