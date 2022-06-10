@@ -25,3 +25,29 @@
             </ul>
     </div>
 </template>
+
+<style scoped>
+    
+    .dv-leftmenu {
+        background-color: #efefef;
+        box-shadow: 6px 0 5px -2px #bfbfbf;
+        width: 14%
+    }
+
+    ul.navbar-nav {
+        margin-top: 20px
+    }
+
+    .nav-link {
+         border-bottom: 1px solid #5b54b7;
+         color: #5b54b7;
+         padding: 10px 15px;
+    }
+
+    .nav-link:hover, .nav-link:focus {
+        background-color: #ada9db;
+        border-color: #ada9db;
+        color: white;
+    }
+
+</style>
