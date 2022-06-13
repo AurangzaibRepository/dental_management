@@ -19,8 +19,7 @@
                 <div class="col-md-6 mb-3">
                     <label>Subscription</label>
                     <select class="form-select">
-                        <option value="Free">Free</option>
-                        <option value="Premium">Premium</option>
+                        <option v-for="option in subscriptionOptions" :value="option.value">{{option.text}}</option>
                     </select>
                 </div>
                 <div class="col-md-6 mb-3">
@@ -51,6 +50,10 @@ export default {
             statusOptions: [
                 {text: 'Active', value: '1'},
                 {text: 'Inactive', value: '0'}
+            ],
+            subscriptionOptions: [
+                {text: 'Free', value: 'Free'},
+                {text: 'Premium', value: 'Premium'}
             ]
         }
     }
