@@ -26,8 +26,7 @@
                 <div class="col-md-6 mb-3">
                     <label>Status</label>
                     <select class="form-select">
-                        <option value="1">Active</option>
-                        <option value="0">Inactive</option>
+                        <option v-for="option in statusOptions" :value="option.value">{{option.text}}</option>
                     </select>
                 </div>
                 <div class="col-md-6 mb-3">
@@ -43,4 +42,17 @@
             </div>
         </div>
     </div>
-</template
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            statusOptions: [
+                {text: 'Active', value: '1'},
+                {text: 'Inactive', value: '0'}
+            ]
+        }
+    }
+}
+</script>
