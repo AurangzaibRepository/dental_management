@@ -3,42 +3,44 @@
         <label class="page-title">Dentists - Add</label>
 
         <div class="dv-section">
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <label>First Name</label>
-                    <input type="text" class="form-control"></input>
+          <form @submit.prevent="addDentist">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label>First Name</label>
+                        <input type="text" class="form-control"></input>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Last Name</label>
+                        <input type="text"  class="form-control"></input>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Email</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Subscription</label>
+                        <select class="form-select">
+                            <option v-for="option in subscriptionOptions" :value="option.value">{{option.text}}</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Status</label>
+                        <select class="form-select">
+                            <option v-for="option in statusOptions" :value="option.value">{{option.text}}</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Password</label>
+                        <input type="password" class="form-control"></input>
+                    </div>
                 </div>
-                <div class="col-md-6 mb-3">
-                    <label>Last Name</label>
-                    <input type="text"  class="form-control"></input>
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-end">
+                        <button class="btn btn-primary">Save</button>
+                        <router-link to="/dentists" class="btn btn-secondary">Cancel</router-link>
+                    </div>
                 </div>
-                <div class="col-md-6 mb-3">
-                    <label>Email</label>
-                    <input type="text" class="form-control">
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label>Subscription</label>
-                    <select class="form-select">
-                        <option v-for="option in subscriptionOptions" :value="option.value">{{option.text}}</option>
-                    </select>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label>Status</label>
-                    <select class="form-select">
-                        <option v-for="option in statusOptions" :value="option.value">{{option.text}}</option>
-                    </select>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label>Password</label>
-                    <input type="password" class="form-control"></input>
-                </div>
-            </div>
-            <div class="row dv-form-buttons">
-                <div class="col-md-12 d-flex justify-content-end">
-                    <button class="btn btn-primary">Save</button>
-                    <router-link to="/dentists" class="btn btn-secondary">Cancel</router-link>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 </template>
