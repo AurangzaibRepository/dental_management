@@ -2,7 +2,7 @@
     <div>
         <label class="page-title">Dentists - Add</label>
         <div class="dv-section">
-            <div class="row">
+            <div class="row dv-form">
                 <div class="col-md-6 mb-3">
                     <label>First Name</label>
                     <input type="text" class="form-control"></input>
@@ -32,6 +32,12 @@
                 <div class="col-md-6 mb-3">
                     <label>Password</label>
                     <input type="password" class="form-control"></input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button class="btn btn-primary">Save</button>
+                    <router-link to="/dentists" class="btn btn-secondary">Cancel</router-link>
                 </div>
             </div>
         </div>
