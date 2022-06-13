@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="row dv-form-buttons">
-                <div class="col-md-12">
+                <div class="col-md-12 d-flex justify-content-end">
                     <button class="btn btn-primary">Save</button>
                     <router-link to="/dentists" class="btn btn-secondary">Cancel</router-link>
                 </div>
