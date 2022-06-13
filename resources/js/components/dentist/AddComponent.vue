@@ -63,7 +63,16 @@ export default {
 
     methods: {
         addDentist() {
-            
+
+            let uri = '/api/dentists';
+            axios
+                .post(uri, this.dentist)
+                .then(response => {
+
+                })
+                .catch(error => {
+                    console.log(error);
+                });
         }
     }
 }
