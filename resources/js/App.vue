@@ -53,9 +53,9 @@ export default {
     }
 
     .page-title {
-        border-bottom: 1px solid;
-        color: #333;
+        color: #4c4c4c;
         font-size: 15px;
+        font-weight: 600;
         width: 100%;
     }
 
