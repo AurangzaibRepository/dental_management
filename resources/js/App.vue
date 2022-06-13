@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import LeftMenuComponent from './components/layouts/LeftMenuComponent';
+import LeftMenuComponent from './components/partials/LeftMenuComponent';
 
 export default {
     components: {
