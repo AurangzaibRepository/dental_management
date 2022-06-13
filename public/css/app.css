@@ -72,16 +72,11 @@
   }
 }
 
-html {
-  height: 100%;
-}
-
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
-  height: 100%;
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
@@ -10275,4 +10270,11 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
 }
