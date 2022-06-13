@@ -48,8 +48,15 @@ export default {
     }
 
     .dv-content {
-        padding: 20px;
+        padding: 30px;
         width: 86%
+    }
+
+    .page-title {
+        border-bottom: 1px solid;
+        color: #333;
+        font-size: 15px;
+        width: 100%;
     }
 
 </style>
