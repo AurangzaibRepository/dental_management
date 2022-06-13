@@ -10283,3 +10283,11 @@ body {
   font-size: 13px;
   padding: 4px 10px;
 }
+
+.page-title {
+  color: #4c4c4c;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  width: 100%;
+}
