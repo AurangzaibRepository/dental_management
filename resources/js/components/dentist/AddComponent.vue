@@ -1,6 +1,7 @@
 <template>
     <div>
         <label class="page-title">Dentists - Add</label>
+        
         <div class="dv-section">
             <div class="row dv-form">
                 <div class="col-md-6 mb-3">
