@@ -51,12 +51,4 @@ export default {
         padding: 30px;
         width: 86%
     }
-
-    .page-title {
-        color: #4c4c4c;
-        font-size: 15px;
-        font-weight: 600;
-        width: 100%;
-    }
-
 </style>
