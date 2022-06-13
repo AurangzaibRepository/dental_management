@@ -1,3 +1,3 @@
 <template>
-    <label>Dentists</label>
+    <label class="page-title">Dentists</label>
 </template>
