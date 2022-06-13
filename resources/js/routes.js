@@ -1,6 +1,6 @@
 import DashboardComponent from './components/DashboardComponent';
 import DentistComponent from './components/dentist/ListComponent';
-import ProductsComponent from './components/ProductsComponent';
+import AddDentistComponent from './components/dentist/AddComponent';
 import CreateProduct from './components/CreateProductComponent';
 import UpdateProduct from './components/UpdateProductComponent';
 
@@ -16,9 +16,9 @@ const routes = [
         component: DentistComponent
     },
     {
-        name: 'products',
-        path: '/products',
-        component: ProductsComponent
+        name: 'add-dentist',
+        path: '/dentists/add',
+        component: AddDentistComponent
     },
     {
         name: 'create-product',
