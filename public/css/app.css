@@ -10279,9 +10279,17 @@ body {
   height: 100%;
 }
 
-.btn-primary {
+.btn {
   font-size: 13px;
   padding: 4px 10px;
+}
+
+.dv-form-buttons .btn {
+  min-width: 60px;
+}
+
+.dv-form-buttons .btn-secondary {
+  margin-left: 4px;
 }
 
 .page-title {
