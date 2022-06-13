@@ -7,31 +7,31 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label>First Name</label>
-                        <input type="text" class="form-control" v-model="first_name"></input>
+                        <input type="text" class="form-control" v-model="dentist.first_name"></input>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label>Last Name</label>
-                        <input type="text"  class="form-control" v-model="last_name"></input>
+                        <input type="text" class="form-control" v-model="dentist.last_name"></input>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label>Email</label>
-                        <input type="text" class="form-control" v-model="email"></input>
+                        <input type="text" class="form-control" v-model="dentist.email"></input>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label>Subscription</label>
-                        <select class="form-select" v-model="subscription">
+                        <select class="form-select" v-model="dentist.subscription">
                             <option v-for="option in subscriptionOptions" :value="option.value">{{option.text}}</option>
                         </select>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label>Status</label>
-                        <select class="form-select" v-model="active">
+                        <select class="form-select" v-model="dentist.active">
                             <option v-for="option in statusOptions" :value="option.value">{{option.text}}</option>
                         </select>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label>Password</label>
-                        <input type="password" class="form-control" v-model="password"></input>
+                        <input type="password" class="form-control" v-model="dentist.password"></input>
                     </div>
                 </div>
                 <div class="row">
@@ -56,7 +56,14 @@ export default {
             subscriptionOptions: [
                 {text: 'Free', value: 'Free'},
                 {text: 'Premium', value: 'Premium'}
-            ]
+            ],
+            dentist: {}
+        }
+    },
+
+    methods: {
+        addDentist() {
+            
         }
     }
 }
