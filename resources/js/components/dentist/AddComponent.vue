@@ -5,11 +5,7 @@
         <div class="dv-section">
           <form @submit.prevent="addDentist">
 
-                <div class="alert alert-danger" v-if="errors.length">
-                    <ul>
-                        <li v-for="error in errors">{{error}}</li>
-                    </ul>
-                </div>
+               
 
                 <div class="row">
                     <div class="col-md-6 mb-3">
@@ -53,7 +49,13 @@
 </template>
 
 <script>
+import ErrorComponent from './components/partials/ErrorComponent';
+
 export default {
+    component: {
+        ErrorComponent
+    },
+
     data() {
         return {
             statusOptions: [
