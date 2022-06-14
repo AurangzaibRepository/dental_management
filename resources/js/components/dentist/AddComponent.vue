@@ -65,7 +65,8 @@ export default {
                 {text: 'Premium', value: 'Premium'}
             ],
             errors: [],
-            dentist: {}
+            dentist: {},
+            emailReg: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/
         }
     },
 
@@ -85,13 +86,15 @@ export default {
 
             if (!this.dentist.email) {
                 this.errors.push('Email required');
+            } else if (!this.emailReg.test(this.dentist.email)) {
+                this.errors.push('Invalid email');
             }
 
             if (!this.dentist.subscription) {
                 this.errors.push('Subscription required');
             }
 
-            if (!this.dentist.status) {
+            if (!this.dentist.active) {
                 this.errors.push('Status required');
             }
 
