@@ -5,3 +5,11 @@
         </ul>
     </div>
 </template>
+
+<script>
+export default {
+    props: {
+        errors: Array
+    }
+}
+</script>
