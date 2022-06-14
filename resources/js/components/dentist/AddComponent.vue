@@ -70,11 +70,23 @@ export default {
     },
 
     methods: {
+
+        validateForm() {
+
+            if (!this.dentist.first_name) {
+                this.errors.push('First name required');
+            }
+
+            if (!this.dentist.last_name) {
+                this.errors.push('Last name required');
+            }
+
+            return (!this.errors.length > 0);
+        },
+
         addDentist() {
 
-            let isValid = this.validateForm();
-
-            if (!isValid) {
+            if (!this.validateForm()) {
                 return false;
             }
 
