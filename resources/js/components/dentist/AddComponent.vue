@@ -73,12 +73,30 @@ export default {
 
         validateForm() {
 
+            this.errors = [];
+            
             if (!this.dentist.first_name) {
                 this.errors.push('First name required');
             }
 
             if (!this.dentist.last_name) {
                 this.errors.push('Last name required');
+            }
+
+            if (!this.dentist.email) {
+                this.errors.push('Email required');
+            }
+
+            if (!this.dentist.subscription) {
+                this.errors.push('Subscription required');
+            }
+
+            if (!this.dentist.status) {
+                this.errors.push('Status required');
+            }
+
+            if (!this.dentist.password) {
+                this.errors.push('Password required');
             }
 
             return (!this.errors.length > 0);
