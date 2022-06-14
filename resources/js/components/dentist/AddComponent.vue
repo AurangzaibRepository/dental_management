@@ -4,6 +4,13 @@
 
         <div class="dv-section">
           <form @submit.prevent="addDentist">
+
+                <p v-if="errors.length">
+                    <ul>
+                        <li v-for="error in errors">{{error}}</li>
+                    </ul>
+                </p>
+
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label>First Name</label>
@@ -57,12 +64,19 @@ export default {
                 {text: 'Free', value: 'Free'},
                 {text: 'Premium', value: 'Premium'}
             ],
+            errors: [],
             dentist: {}
         }
     },
 
     methods: {
         addDentist() {
+
+            let isValid = this.validateForm();
+
+            if (!isValid) {
+                return false;
+            }
 
             let uri = '/api/dentists';
             axios
