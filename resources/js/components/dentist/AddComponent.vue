@@ -5,7 +5,7 @@
         <div class="dv-section">
           <form @submit.prevent="addDentist">
 
-               
+               <ErrorComponent />
 
                 <div class="row">
                     <div class="col-md-6 mb-3">
@@ -49,10 +49,10 @@
 </template>
 
 <script>
-import ErrorComponent from './components/partials/ErrorComponent';
+import ErrorComponent from '../partials/ErrorsComponent';
 
 export default {
-    component: {
+    components: {
         ErrorComponent
     },
 
