@@ -1,7 +1,7 @@
 <template>
     <div class="dv-base">
         <div class="dv-navbar">
-            <span class="spn-app-title">DENTALINK</span>
+            <span class="spn-app-title">{{pageTitle}}</span>
         </div>
         <div class="dv-layout">
             <LeftMenuComponent />
@@ -18,6 +18,12 @@ import LeftMenuComponent from './components/partials/LeftMenuComponent';
 export default {
     components: {
         LeftMenuComponent
+    },
+
+    data() {
+        return {
+            pageTitle: process.env.MIX_APP_NAME
+        }
     }   
 }
 </script>
