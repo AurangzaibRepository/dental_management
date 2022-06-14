@@ -5,11 +5,11 @@
         <div class="dv-section">
           <form @submit.prevent="addDentist">
 
-                <p v-if="errors.length">
+                <div class="alert alert-danger" v-if="errors.length">
                     <ul>
                         <li v-for="error in errors">{{error}}</li>
                     </ul>
-                </p>
+                </div>
 
                 <div class="row">
                     <div class="col-md-6 mb-3">
@@ -74,7 +74,7 @@ export default {
         validateForm() {
 
             this.errors = [];
-            
+
             if (!this.dentist.first_name) {
                 this.errors.push('First name required');
             }
