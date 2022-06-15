@@ -5,7 +5,7 @@
         <div class="dv-section">
           <form @submit.prevent="addDentist">
 
-               <ErrorComponent errors="errors"/>
+               <ErrorComponent :errors="errors" />
 
                 <div class="row">
                     <div class="col-md-6 mb-3">
