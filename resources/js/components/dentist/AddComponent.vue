@@ -113,7 +113,7 @@ export default {
                 return false;
             }
 
-            let uri = '/api/dentists';
+            let uri = config.API_BASE_URL + config.DENTIST_URL;
             axios
                 .post(uri, this.dentist)
                 .then(response => {
