@@ -1,9 +1,7 @@
 <template>
     <div>
         <label class="page-title">Dentists</label>
-        <div class="alert alert-success" v-if="success">
-            Profile saved successfully
-        </div>
+        <ErrorComponent :success="success" />
 
         <div class="row">
             <div class="col-md-12 d-flex justify-content-end">
@@ -15,7 +13,13 @@
 </template>
 
 <script>
+import ErrorComponent from '../partials/ErrorsComponent';
+
 export default {
+    components: {
+        ErrorComponent
+    },
+
     data() {
         return {
             success: '',
