@@ -117,10 +117,11 @@ export default {
             axios
                 .post(uri, this.dentist)
                 .then(response => {
-
+                    localStorage.setItem('success', 'Profile saved successfully');
+                    this.$router.push({name: 'dentists'});
                 })
                 .catch(error => {
-                    console.log(error);
+                    this.errors.push('Some error occurred while processing request');
                 });
         }
     }
