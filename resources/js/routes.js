@@ -1,8 +1,7 @@
 import DashboardComponent from './components/DashboardComponent';
 import DentistComponent from './components/dentist/ListComponent';
 import AddDentistComponent from './components/dentist/AddComponent';
-import CreateProduct from './components/CreateProductComponent';
-import UpdateProduct from './components/UpdateProductComponent';
+import UpdateDentistComponent from './components/dentist/UpdateComponent';
 
 const routes = [
     {
@@ -21,14 +20,9 @@ const routes = [
         component: AddDentistComponent
     },
     {
-        name: 'create-product',
-        path: '/products/create',
-        component: CreateProduct
-    },
-    {
-        name: 'update-product',
-        path: '/products/edit/:id',
-        component: UpdateProduct
+        name: 'update-dentist',
+        path: '/dentists/:id',
+        component: UpdateDentistComponent
     }
 ];
 
