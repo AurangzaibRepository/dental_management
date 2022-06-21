@@ -20,6 +20,10 @@ class RegisterRequest extends FormRequest
             'subscription' => [ 
                 'required',
                 Rule::in(['Free', 'Premium'])
+            ],
+            'role' => [
+                'required',
+                Rule::in(['Dentist', 'Technician'])
             ]
         ];
     }
@@ -29,7 +33,8 @@ class RegisterRequest extends FormRequest
         return [
             'required' => ':attribute is required',
             'email.email' => 'Invalid email',
-            'subscription.in' => 'Invalid subscription'
+            'subscription.in' => 'Invalid subscription',
+            'role.in' => 'Invalid role'
         ];
     }
 
