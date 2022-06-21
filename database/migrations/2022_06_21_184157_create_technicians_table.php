@@ -10,6 +10,13 @@ return new class extends Migration
     {
         Schema::create('technicians', function (Blueprint $table) {
             $table->id();
+            $table->string('first_name', 50);
+            $table->string('last_name', 50);
+            $table->string('email', 80);
+            $table->string('phone_number', 50);
+            $table->string('password', 200);
+            $table->enum('active', ['0', '1']);
+            $table->enum('subscription', ['Free', 'Premium']);
             $table->timestamps();
         });
     }
