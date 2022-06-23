@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Dentist extends Model
 {
     use HasFactory;
+
+    public function register(array $data): void
+    {
+        $this->create($data);
+    }
 }
