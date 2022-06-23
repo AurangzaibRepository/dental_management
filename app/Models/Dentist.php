@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\Request;
 
 class Dentist extends Model
 {
@@ -17,7 +18,8 @@ class Dentist extends Model
         'email',
         'phone_number',
         'password',
-        'subscription'
+        'subscription',
+        'profile_picture'
     ];
 
     public function password(): Attribute
@@ -27,8 +29,15 @@ class Dentist extends Model
         );      
     }
 
-    public function register(array $data): void
+    public function register(Request $request): void
     {
-        $this->create($data);
+        $file = $request->picture;
+
+        if ($file) {
+            $fileName = $file->getClientOriginalName();
+            $file->move(public_path('/images/dentist'), $fileName);
+            $request->request->add(['profile_picture' => $fileName]);
+        }
+        $this->create($request->all());
     }
 }
