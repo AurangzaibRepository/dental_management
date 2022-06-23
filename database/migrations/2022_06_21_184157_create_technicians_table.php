@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('password', 200);
             $table->enum('active', ['0', '1']);
             $table->enum('subscription', ['Free', 'Premium']);
+            $table->string('profile_picture', 80)->nullable();
             $table->timestamps();
         });
     }
