@@ -18,7 +18,7 @@ class AuthController extends Controller
     public function register(RegisterRequest $request): JsonResponse
     {
         if ($request->role === 'Dentist') {
-            $this->dentist->register();
+            $this->dentist->register($request);
         }
 
         return response()->json([
