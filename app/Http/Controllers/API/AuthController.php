@@ -7,11 +7,13 @@ use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegisterRequest;
 use App\Models\Dentist;
+use App\Models\Techician;
 
 class AuthController extends Controller
 {
     public function __construct(
-        private Dentist $dentist
+        private Dentist $dentist,
+        private Technician $technician
     ) {
     }
 
@@ -19,6 +21,10 @@ class AuthController extends Controller
     {
         if ($request->role === 'Dentist') {
             $this->dentist->register($request);
+        }
+
+        if ($request->role === 'Technician') {
+            $this->$technician->register($request);
         }
 
         return response()->json([
