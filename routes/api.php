@@ -15,8 +15,7 @@ use App\Http\Controllers\API\AuthController;
 */
 
 Route::middleware('api')->group(function () {
-
-    Route::prefix('auth')->group(function() {
+    Route::prefix('auth')->group(function () {
         Route::post('/register', [AuthController::class, 'register'])->name('registerUser');
     });
 });

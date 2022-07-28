@@ -14,10 +14,10 @@ class RegisterRequest extends FormRequest
         return [
             'first_name' => 'required',
             'last_name' => 'required',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:dentists',
             'password' => 'required|min:8',
             'phone_number' => 'required',
-            'subscription' => [ 
+            'subscription' => [
                 'required',
                 Rule::in(['Free', 'Premium'])
             ],
@@ -33,6 +33,7 @@ class RegisterRequest extends FormRequest
         return [
             'required' => ':attribute is required',
             'email.email' => 'Invalid email',
+            'email.unique' => 'Email already exists',
             'subscription.in' => 'Invalid subscription',
             'role.in' => 'Invalid role'
         ];
