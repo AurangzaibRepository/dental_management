@@ -7,7 +7,7 @@ use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegisterRequest;
 use App\Models\Dentist;
-use App\Models\Techician;
+use App\Models\Technician;
 
 class AuthController extends Controller
 {
