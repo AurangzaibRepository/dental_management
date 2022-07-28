@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 class Technician extends Model
 {
@@ -18,4 +19,9 @@ class Technician extends Model
         'subscription',
         'profile_picture'
     ];
+
+    public function register(Request $request): void
+    {
+        $this->create($request->all());
+    }
 }
