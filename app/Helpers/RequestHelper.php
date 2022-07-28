@@ -6,7 +6,7 @@ use Illuminate\Http\JsonResponse;
 
 class RequestHelper
 {
-    public function getResponse(
+    public static function getResponse(
         bool $status,
         array $errorList,
         string $message = null,
