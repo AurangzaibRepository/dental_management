@@ -2,6 +2,8 @@
 
 namespace App\Helpers;
 
+use Illuminate\Http\JsonResponse;
+
 class RequestHelper
 {
     public function getResponse(
@@ -9,7 +11,7 @@ class RequestHelper
         array $errorList,
         string $message = null,
         array $data = null
-    ) {
+    ): JsonResponse {
         $response = ['status' => $status];
 
         if ($errorList !== null) {
@@ -23,5 +25,7 @@ class RequestHelper
         if ($data !== null) {
             $response['data'] = $data;
         }
+
+        return response()->json($response);
     }
 }
