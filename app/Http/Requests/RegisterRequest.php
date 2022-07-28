@@ -17,7 +17,7 @@ class RegisterRequest extends FormRequest
             'last_name' => 'required',
             'email' => 'required|email|unique:'. Str::plural($this->role),
             'password' => 'required|min:8',
-            'phone_number' => 'required',
+            'phone_number' => 'required|unique:'. Str::plural($this->role),
             'subscription' => [
                 'required',
                 Rule::in(['Free', 'Premium'])
@@ -35,6 +35,7 @@ class RegisterRequest extends FormRequest
             'required' => ':attribute is required',
             'email.email' => 'Invalid email',
             'email.unique' => 'Email already exists',
+            'phone_number.unique' => 'Phone number already exists',
             'subscription.in' => 'Invalid subscription',
             'role.in' => 'Invalid role'
         ];
