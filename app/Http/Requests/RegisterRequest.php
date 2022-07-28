@@ -5,6 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Str;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
 class RegisterRequest extends FormRequest
@@ -14,7 +15,7 @@ class RegisterRequest extends FormRequest
         return [
             'first_name' => 'required',
             'last_name' => 'required',
-            'email' => 'required|email|unique:dentists',
+            'email' => 'required|email|unique:'. Str::plural($this->role),
             'password' => 'required|min:8',
             'phone_number' => 'required',
             'subscription' => [
