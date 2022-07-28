@@ -7,6 +7,7 @@ use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Str;
 use Illuminate\Http\Exceptions\HttpResponseException;
+use RequestHelper;
 
 class RegisterRequest extends FormRequest
 {
@@ -43,9 +44,8 @@ class RegisterRequest extends FormRequest
 
     public function failedValidation(Validator $validator)
     {
-        throw new HttpResponseException(response()->json([
-            'status' => false,
-            'errors' => $validator->errors()->all()
-        ]));
+        throw new HttpResponseException(
+            RequestHelper::getResponse(false, $validator->errors()->all())
+        );
     }
 }
