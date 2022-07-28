@@ -22,6 +22,14 @@ class Technician extends Model
 
     public function register(Request $request): void
     {
+        $file = $request->picture;
+
+        if ($file) {
+            $fileName = $file->getClientOriginalName();
+            $file->move(public_path('/images/technician'), $fileName);
+            $request->request->add(['profile_picture' => $fileName]);
+        }
+
         $this->create($request->all());
     }
 }
