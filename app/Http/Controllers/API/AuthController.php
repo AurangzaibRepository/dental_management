@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\RegisterRequest;
 use App\Models\Dentist;
 use App\Models\Technician;
+use RequestHelper;
 
 class AuthController extends Controller
 {
@@ -27,9 +28,6 @@ class AuthController extends Controller
             $this->technician->register($request);
         }
 
-        return response()->json([
-            'status' => true,
-            'message' => 'Registration completed successfully'
-        ]);
+        return RequestHelper::getResponse(true, [], 'Registration completed successfully');
     }
 }
