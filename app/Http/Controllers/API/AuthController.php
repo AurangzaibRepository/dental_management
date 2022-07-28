@@ -24,7 +24,7 @@ class AuthController extends Controller
         }
 
         if ($request->role === 'Technician') {
-            $this->$technician->register($request);
+            $this->technician->register($request);
         }
 
         return response()->json([
