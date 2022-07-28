@@ -14,7 +14,7 @@ class RequestHelper
     ): JsonResponse {
         $response = ['status' => $status];
 
-        if ($errorList !== null) {
+        if (!empty($errorList)) {
             $response['errors'] = $errorList;
         }
 
